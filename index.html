@@ -6,13 +6,14 @@
 <script src="script.js"></script>
 </head>
 
-<body onload="hideCopyright(); checkURL(); prepareDeck();">
+<body onload="preVerify(); checkURL(); prepareDeck();">
 	
 	<div id="copyright-container">
 		<p>This tool must only be used by Vlerick Business School and participants during programmes provided by Vlerick Business School.</p>
 		<p>Any use outside of these programmes is prohibited.</p>
 		<p>Please verify you understood this by clicking the checkbox below</p>
 		<p><input id="copyright-check" type="checkbox">I confirm that I have read and understood this message.</p>
+		<p><input id="cookie-check" type="checkbox">I consent to cookies being used to remember my choice.</p>
 		<p id="copyright-warning"></p>
 		<div class="button" onclick="verify();">Proceed</div>
 	</div>

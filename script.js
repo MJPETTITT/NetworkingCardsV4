@@ -498,8 +498,11 @@ var startTime = "1:00";
 /*added for copyright check*/
 
 function hideCopyright() {
-	if (document.cookie == "1") {
 	document.getElementById("copyright-container").classList.add("hidden");
+}
+function preVerify() {
+	if (document.cookie == "1") {
+	hideCopyright();
 	} else {
 		/*do nothing*/
 	}
@@ -507,7 +510,9 @@ function hideCopyright() {
 
 function verify() {
 	if (document.getElementById("copyright-check").checked == true) {
+		if (document.getElementById("cookie-check").checked == true) {
 		document.cookie = "1";
+		}
 		hideCopyright();
 	} else {
 		document.getElementById("copyright-warning").innerText = "Please click to confirm that you have read an undertood this message."
