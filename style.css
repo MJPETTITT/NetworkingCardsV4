@@ -1,0 +1,407 @@
+@charset "utf-8";
+@import url("https://use.typekit.net/ofd3qnu.css");
+@import url('http://fonts.cdnfonts.com/css/gotham');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+html {
+  font-family: Gotham, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+}
+
+body {
+	color: #323232;
+	background: #EFEFEF;
+	text-align: center;
+	margin: 0;
+	min-height: 100vh;
+	width: 100%;
+	  justify-content: center;
+  align-items: center;
+  /*overflow: hidden;*/
+	position: relative;
+	oveflow: scroll;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: 900;
+}
+
+p {
+	font-weight: 400;
+}
+
+.flip-card {
+  background-color: transparent;
+	width: 220px;
+  height: 343px;
+  perspective: 1000px;
+	display: inline-block;
+	margin: 0px 40px 60px 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /*transition: transform 0.6s;*/
+  transform-style: preserve-3d;
+  /*box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);*/
+	border-radius: 20px;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+	transition: transform 0.6s;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+	border-radius: 20px;
+	border:solid white 12px;
+	padding: 10px;
+	box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card-front {
+		/*background-image: linear-gradient(#006BAD, #00A8E4);*/
+  color: #fff;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+	/*text-transform: uppercase;*/
+	background-color: #fff;
+  color: #323232;
+}
+
+.drawn {
+	transform: translate(0px,200px);
+	opacity: 0;
+	transition: transform 0.6s, opacity 0.6s;
+}
+
+.predeal {
+	transform: translate(0px,-200px);
+	opacity: 0;
+	transition: transform 0s, opacity 0s;
+}
+.dealt {
+	transform: translate(0px,0px);
+	opacity: 1;
+	transition: transform 0.6s, opacity 0.6s;
+}
+
+.gradient-purple {
+      background: -webkit-linear-gradient(298deg,#34307F,#8B3D96);
+}
+
+.gradient-teal {
+    background: -webkit-linear-gradient(298deg,#00ADBF,#19BDCD);
+}
+
+.gradient-blue {
+    background: -webkit-linear-gradient(298deg,#006BAD,#00A8E4);
+}
+
+.gradient-green {
+    background: -webkit-linear-gradient(298deg,#00A955,#AED24A);
+}
+
+.gradient-pink {
+    background: -webkit-linear-gradient(298deg,#EF3A79,#F48037);
+}
+
+.gradient-red {
+    background: -webkit-linear-gradient(298deg,#BB2D38,#EB1D24);
+}
+.gradient-grey {
+    background: -webkit-linear-gradient(298deg,#333,#666);
+}
+.gradient-black {
+    background: -webkit-linear-gradient(298deg,#0d0d0d,#323232);
+}
+
+.container {
+  height: 100%;
+  position: relative;
+  /*border: 3px solid green;*/
+}
+
+.center {
+	width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#flipper {
+	cursor: pointer;
+	margin: 50px 0 100px 0;
+	display: inline;
+}
+
+
+
+
+
+.instructions {
+		margin: 20px;
+	display: block;
+	position: relative;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.unhidden {
+	opacity: 100;
+}
+
+.unhidden, .hidden {
+	transition: opacity 0.5s;
+}
+
+.float-left {
+	float: left;
+	width: 50%;
+}
+
+.float-right {
+	float: left;
+}
+
+#game-container {
+	margin: 50px 0 0 0;
+	height: 550px;
+}
+
+.icon {
+	width: 50px;
+	height: 50px;
+}
+
+
+/*added for header*/
+
+/* Style the header with a grey background and some padding */
+header {
+  overflow: hidden;
+  background-color: #323232;
+  /*padding: 20px 10px;*/
+	color: white;
+}
+
+/* Style the header links */
+header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+	width: 200px;
+	height: 100px;
+	background-image: url("images/Vlerick logo standard landscape white.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Float the link section to the left */
+.header-left {
+  float: left;
+}
+
+/*added for buttons*/
+.button {
+	background-color: #00A955;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	max-width: 10em;
+	padding:1em;
+	margin: 2em auto;
+}
+
+.button:hover {
+	opacity: 0.8;
+}
+
+.button:active {
+	/*box-shadow: 0 5px 20px rgba(0,0,0,0.0);*/
+	transform: scale(0.97);
+}
+
+.guide-button {
+	padding: 40px 20px;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 900;
+}
+
+#guide-container {
+	position: absolute;
+	width: calc(100% - 80px);
+	max-width: 500px;
+	height: 100%;
+	background-color: #323232;
+	transition:left 0.5s ease;
+	z-index: 0;
+	top: 0;
+	cursor: pointer;
+	color: white;
+	padding: 40px;
+}
+
+#guide-container.unopen {
+	left: -600px;
+	
+}
+
+#guide-container.open {
+	left: 0px;
+	
+}
+
+.ilb {
+	width: 150px;
+	display: inline-block;
+}
+
+#question-number {
+	text-transform: uppercase;
+	/*font-size: 1.5em;*/
+	margin: auto;
+}
+
+.guide-icon {
+	width: 40px;
+	margin: 10px;
+}
+
+.icon-guide {
+	text-align: left;
+}
+
+.x-button {
+position: absolute;
+	top: 10px;
+	right: 10px;
+	font-weight: 900;
+}
+
+.guide-icon-text {
+	margin: auto;
+	padding: 1em; 
+	height: auto;
+}
+
+#whiteout {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #EFEFEF;
+	transition: opacity 0.5s;
+	overflow: auto;
+}
+
+#whiteout.unopen {
+	opacity: 0;
+	pointer-events: none;
+}
+
+#whiteout.open {
+	opacity: 0.8;
+}
+
+
+.material-symbols-outlined {
+	color: white;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.inline {
+	display: inline-block;
+}
+
+.selection {
+	width: 2em;
+	height: 2em;
+	border-radius: 1em;
+	cursor: pointer;
+	margin: 0 0.1em;
+}
+
+.deselected {
+	outline: white solid 2px;
+	opacity: 0.2;
+}
+
+.invalid {
+	color: red;
+}
+
+#play-pause, #timer-adjust {
+	padding: 0 0.5em;
+}
+
+#timer {
+	width: 3em;
+	text-align: left;
+}
+#selection-container {
+	margin: -0.5em 0 0 0;
+}
+
+#copyright-container {
+	position: absolute;
+	width: 100vw;
+		height: 100vh;
+	background: white;
+	z-index: 10;
+	padding: 40px;
+	text-align: center;
+}
+
+#copyright-warning {
+	color: red;
+}
+
+#copyright-container.hidden {
+	width: 0;
+	height: 0;
+	padding: 0;
+}

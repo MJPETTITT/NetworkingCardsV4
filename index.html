@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body onload="checkURL(); prepareDeck();">
+	
+	<div id="copyright-container">
+		<p>This tool must only be used by Vlerick Business School and participants during programmes provided by Vlerick Business School.</p>
+		<p>Any use outside of these programmes is prohibited.</p>
+		<p>Please verify you understood this by clicking the checkbox below</p>
+		<p><input id="copyright-check" type="checkbox">I confirm that I have read and understood this message.</p>
+		<p id="copyright-warning"></p>
+		<div class="button" onclick="verify();">Proceed</div>
+	</div>
+	
+<header>
+
+    <div class="logo header-left"></div>
+    <div class="guide-button header-left" onClick="openIt(document.getElementById('guide-container')); openIt(document.getElementById('whiteout'))">Instructions</div>
+<div class="guide-button header-right" ><span onClick="startStopTimer();" id="play-pause">⏵︎</span><span id="timer" onkeyup="timerCheck();" class="inline" contenteditable="true">1:30</span></div>
+</header>
+
+
+	
+<div id="game-container">
+	
+<div id="flipper" onclick="flipOnOff();">
+  <div class="flip-card" id="card-a">
+    <div class="flip-card-inner">
+      <div class="flip-card-front gradient-blue" id="card-front-a">
+        <div class="container">
+          <div class="center">
+            <h1>Q1</h1>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card-back" id="card-back-a">
+        <div class="container">
+          <div class="center">
+            <h2 id="question-a-container"></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flip-card" id="card-b">
+    <div class="flip-card-inner">
+      <div class="flip-card-front gradient-blue" id="card-front-b">
+        <div class="container">
+          <div class="center">
+            <h1>Q2</h1>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card-back" id="card-back-b">
+        <div class="container">
+          <div class="center">
+            <h2 id="question-b-container" class="hidden"></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+	<div id="whiteout" class="open"></div>
+	
+	
+	<div id="guide-container" class="open" onClick="unopenIt(document.getElementById('guide-container'));unopenIt(document.getElementById('whiteout'));">
+		<div class="x-button">X</div>
+	<h2>GETTING TO KNOW EACH OTHER</h2>
+		<p>The goal of this exercise is to get to know your peers a little better. For this exercise, you will gather in pairs or small groups. Then follow 4 easy steps:</p>
+		<p>1. Decide who starts. </p>
+		<p>2. Click the cards to reveal two question options.</p>
+		<p>3. Ask your peer(s) one of the two questions on the cards. You can choose who answers.</p>
+		<p>4. Take turns until the networking activity is over.</p>
+		<h2>TOP TIPS</h2>
+		<p>Let one person share their screen, so everyone can read the questions.</p>
+		<p>Try to be short, so you can answer more questions. There is a timer to help you keep track of time. You can change the timer length yourself in the top right corner (click on the numbers). </p>
+		<p>Be flexible: adapt your question if you notice it’s difficult to answer, or move on to the next cards.</p>			
+</div>
+</body>
+</html>
