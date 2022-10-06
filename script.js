@@ -500,6 +500,7 @@ var startTime = "1:00";
 function hideCopyright() {
 	document.getElementById("copyright-container").classList.add("hidden");
 }
+
 function preVerify() {
 	if (document.cookie == "1") {
 	hideCopyright();

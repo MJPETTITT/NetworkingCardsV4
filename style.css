@@ -405,3 +405,10 @@ position: absolute;
 	height: 0;
 	padding: 0;
 }
+
+#copyright-notice {
+	margin: 0 auto;
+	width: 50%;
+	top: 80%;
+	font-size: 0.8em;
+}
