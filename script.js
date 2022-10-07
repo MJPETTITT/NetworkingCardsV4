@@ -464,11 +464,11 @@ var startTime = "1:00";
 			startTime = document.getElementById("timer").innerText;
             startTimer();
             timer = 1;
-            document.getElementById('play-pause').innerText = "⏸︎";
+            document.getElementById('play-pause').innerText = "pause";
         } else {
             stopTimer();
             timer = 0;
-            document.getElementById('play-pause').innerText = "⏵︎";
+            document.getElementById('play-pause').innerText = "play_arrow";
         }
 			}
     }
