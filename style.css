@@ -1,7 +1,14 @@
 @charset "utf-8";
 @import url("https://use.typekit.net/ofd3qnu.css");
 @import url('https://fonts.cdnfonts.com/css/gotham');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+/*@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');*/
+/* fallback */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v61/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2) format('woff2');
+}
 
 html {
   font-family: Gotham, Arial, Helvetica, sans-serif;
